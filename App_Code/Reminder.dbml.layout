@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Reminder">
+  <DataContextMoniker Name="/ReminderDataContext" />
+  <nestedChildShapes>
+    <classShape Id="ff7d7007-fe71-4519-bc02-b61d488800b1" absoluteBounds="0.75, 1.25, 2, 1.1939925130208338">
+      <DataClassMoniker Name="/ReminderDataContext/_514_List" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1b362381-0029-4765-ad78-3473691ce4db" absoluteBounds="0.765, 1.71, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d939ab0c-52f9-4dc5-bfe9-12094a6587f2" absoluteBounds="4.75, 2.875, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/ReminderDataContext/_514_Reminder" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b2412e48-928e-4e38-a871-d2b55259f59e" absoluteBounds="4.765, 3.335, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 1.84699625651042); (5.75 : 1.84699625651042); (5.75 : 2.875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/ReminderDataContext/_514_List/_514_List__514_Reminder" />
+      <nodes>
+        <classShapeMoniker Id="ff7d7007-fe71-4519-bc02-b61d488800b1" />
+        <classShapeMoniker Id="d939ab0c-52f9-4dc5-bfe9-12094a6587f2" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

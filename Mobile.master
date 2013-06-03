@@ -1,0 +1,34 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Mobile.master.cs" Inherits="Mobile" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.0/jquery.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
+    <script type="text/javascript" src="Js/script.js"></script>
+</head>
+<body>
+    <form id="form1" runat="server" data-ajax="false">
+        <ajax:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server" />
+        <div data-role="page">
+            <header data-role="header" data-fullscreen="true">
+                <h1>Reminders</h1>
+                <%--<a href="#menu" class="menu-button" data-icon="bars" data-iconpos="notext" data-direction="reverse">Menu</a>--%>
+                <asp:HyperLink runat="server" ID="hl_left_button" CssClass="menu-button"></asp:HyperLink>
+                <asp:HyperLink runat="server" ID="hl_right_button" CssClass="menu-button"></asp:HyperLink>
+            </header>
+            <nav id="menu" data-role="panel" data-position="left" data-display="push">
+                <asp:Literal runat="server" ID="lit_menu"></asp:Literal>
+            </nav>
+            <div data-role="content">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

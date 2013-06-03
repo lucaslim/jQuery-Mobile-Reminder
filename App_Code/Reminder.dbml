@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="nuxbox" Class="ReminderDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=nuxbox.db.10247723.hostedresource.com;Initial Catalog=nuxbox;Persist Security Info=True;User ID=nuxbox" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="nuxboxConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.[514_List]" Member="_514_Lists">
+    <Type Name="_514_List">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Association Name="_514_List__514_Reminder" Member="_514_Reminders" ThisKey="Id" OtherKey="ListId" Type="_514_Reminder" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[514_Reminder]" Member="_514_Reminders">
+    <Type Name="_514_Reminder">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Notes" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ListId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Priority" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="_514_List__514_Reminder" Member="_514_List" ThisKey="ListId" OtherKey="Id" Type="_514_List" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>
